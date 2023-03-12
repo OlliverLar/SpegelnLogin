@@ -80,6 +80,21 @@ router.get("/booking", (req, res) => {
   });
 });
 
+router.get("/login", (req, res) => {
+  res.render("login", {
+    headerMenu: menuWithActive(headerMenu, "/login"),
+    path: req.url,
+  });
+});
+
+router.get("/register", (req, res) => {
+  res.render("login", {
+    headerMenu: menuWithActive(headerMenu, "/login"),
+    path: req.url,
+  });
+});
+
+
 // Filmer routes
 router.get("/movies", async (req, res) => {
   const movies = await loadMovies();

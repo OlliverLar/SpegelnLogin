@@ -1,0 +1,160 @@
+
+<%- include ("./layout/header") %> <%- include ("./layout/menu") %>
+<script src="static/js/login.js" defer></script>
+<main class="sec">
+  <section class="sec-content">
+ 
+    <% if(path === '/login' || path == '/login/'){ %>
+      <section class="h-100 gradient-form " style="background-color: transparent">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-5">
+            <div class="card rounded-3 text-black">
+              <div class="row g-0">
+                <div class="col-lg-50">
+                  <div class="card-body p-md-5 mx-md-4">
+                    
+                    <div class="text-center">
+                      
+                      <h1 class="mt-1 mb-5 pb-1">Inloggning</h1>
+                    </div>
+                    
+                    <form>
+                      <p>Var god skriv in dina uppgifter nedan</p>
+                      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example11">Email</label>
+                        <input type="email" id="form2Example11" class="form-control"
+                        placeholder="Email-address" />
+                      </div>
+                      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example22">Lösenord</label>
+                        <input type="password" id="form2Example22" class="form-control" placeholder="Lösenord" />
+                      </div>
+                      
+                      <div class="text-center pt-1 mb-5 pb-1">
+                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Logga
+                          in</button>
+                          <a class="text-muted" href="/uc">Glömt lösenordet?</a>
+                        </div>
+                        
+                        <div class="d-flex align-items-center justify-content-center pb-4">
+                          <p class="mb-0 me-2">Har du inget konto än?</p>
+                          <a href="/register" id="redirectToRegister" class="text-danger"><u>Registrera här!</u></a>
+                        </div>
+                        
+                      </form>
+                      
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <% } %>
+        <% if(path === '/register' || path == '/register/'){ %>
+          <section class="background-radial-gradient overflow-hidden">
+
+  
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+            Välkommen som ny kund hos oss <br />
+          </h1>
+          <p class="mb-4 opacity-70" style="color: hsl(0, 0%, 100%)">
+            Som medlem kommer du att få många fördelar och erbjudanden samt smidig 
+            tillgång till dina biljetter och tidigare köp
+          </p>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+  
+          <div class="card bg-glass">
+            <div class="card-body px-4 py-5 px-md-5">
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="firstNameInput">Förnamn</label>
+                      <input type="text" id="" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="lastNameInput">Efternamn</label>
+                      <input type="text" id="lastNameInput" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="emailInput">Email</label>
+                  <input type="email" id="emailInput" class="form-control" />
+                </div>
+  
+                <!-- Password input -->
+                <div class="row">
+                  <div class="col-6">
+                    <label class="form-label" for="passwordInput">Lösenord</label>
+                    <div class="input-group d-flex mb-4 ">
+                      <input type="password" class="form-control rounded mt-1 " placeholder="Type your password" aria-label="password"
+                        aria-describedby="password" id="password-input"/>
+                      <div class="valid-feedback">Okej</div>
+                      <div class="invalid-feedback">För osäkert</div>
+                    </div>
+                  </div>
+                
+                  <div class="col-6 mt-4 mt-xl-0 w-auto h-auto">
+                
+                    <div class="alert px-4 py-3 mb-0 d-none" role="alert" data-mdb-color="warning" id="password-alert">
+                      <ul class="list-unstyled mb-0">
+                        <li class="requirements leng">
+                          <i class="fas fa-check text-success me-2"></i>
+                          <i class="fas fa-times text-danger me-3"></i>
+                          Lösenordet måste ha minst 8 karaktärer</li>
+                        <li class="requirements big-letter">
+                          <i class="fas fa-check text-success me-2"></i>
+                          <i class="fas fa-times text-danger me-3"></i>
+                          Lösenordet måste ha minst en stor bokstav.</li>
+                        <li class="requirements num">
+                          <i class="fas fa-check text-success me-2"></i>
+                          <i class="fas fa-times text-danger me-3"></i>
+                          Lösenordet måste ha misnt en siffra.</li>
+                        <li class="requirements special-char">
+                          <i class="fas fa-check text-success me-2"></i>
+                          <i class="fas fa-times text-danger me-3"></i>
+                          Lösenordet måste ha minst en "speciell" karaktär.</li>
+                      </ul>
+                    </div>
+                
+                  </div>
+                </div>
+  
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                  Sign up
+                </button>
+                <p class="mb-0 me-2">Har du redan ett konto?</p>
+                <a href="/login" id="redirectToRegister" class="text-danger"><u>Logga in här!</u></a>
+  
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <% } %>
+        
+      </section>
+      </main>
+      <%- include ("./layout/footer") %>
+    </body>
+    </html>
